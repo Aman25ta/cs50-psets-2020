@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Calculator</title>
+        <link rel = "stylesheet" href = "styles.css">
+        <script>
+        function multi()
+        {
+                num1 = document.getElementById("num1").value;
+                num2 = document.getElementById("num2").value;
+                document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function div()
+        {
+                num1 = document.getElementById("num1").value;
+                num2 = document.getElementById("num2").value;
+                document.getElementById("result").innerHTML = num1 / num2;
+        }
+        function add()
+        {
+                num1 = document.getElementById("num1").value;
+                num2 = document.getElementById("num2").value;
+                num3 = 0
+                num3 = +(num1) + +(num2)
+                document.getElementById("result").innerHTML = num3;
+        }
+
+        function sub()
+        {
+                num1 = document.getElementById("num1").value;
+                num2 = document.getElementById("num2").value;
+                document.getElementById("result").innerHTML = +(num1) - +(num2);
+        }
+    </script>
+    </head>
+    <body>
+        <form>
+
+            1st no.<input type = "text" id = "num1"><br>
+            2nd no.<input type = "text" id = "num2"><br>
+            <input type="button" onClick="add()" Value="Add" />
+            <input type="button" onClick="sub()" Value="Subtract" />
+            <input type="button" onClick="multi()" Value="Multiply" />
+            <input type="button" onClick="div()" Value="Divide" />
+            </select><br>
+        </form>
+        <p>Your answer is: </p><p id = "result"></p>
+        <!-- body & links go here -->
+        <h1 style = "font-size: small; " class = "center">
+            <a href = "index.html">Get to back to main page here!</a>
+        </h1>
+    </body>
+</html>

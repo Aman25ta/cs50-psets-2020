@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Location finder</title>
+        <link rel = "stylesheet" href = "styles.css">
+        <link href = "hexbackground.html">
+    </head>
+    <body>
+        <!-- body & links go here -->
+
+        <p>Click the button to get your coordinates.</p>
+
+        <button onclick="getLocation()">Location</button>
+        <p id="latlong">.</p>
+        <script>
+        var x = document.getElementById("latlong");
+
+        function getLocation() {
+        navigator.geolocation.getCurrentPosition(showPosition);
+        }
+
+
+        function showPosition(position) {
+          x.innerHTML = "Latitude: " + position.coords.latitude +
+          "<br>Longitude: " + position.coords.longitude;
+        }
+        </script>
+        <h1 class = "center" style = "font-size: small; ">
+            <a href = "index.html">Get to back to main page here!</a>
+        </h1>
+
+    </body>
+</html>

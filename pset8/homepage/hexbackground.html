@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Got the Html5 colour picker from w3schools(i just learnt the code and stuff) and the margin in div from there too -->
+<html lang="en">
+    <head>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Background picker</title>
+        <link rel = "stylesheet" href = "styles.css">
+        <script>
+        document.querySelector('body').style.backgroundColor = sessionStorage.getItem("colour");
+            function change(){
+            let value = document.querySelector('#html5colorpicker').value;
+            document.querySelector('body').style.backgroundColor = value;
+            sessionStorage.setItem("colour",value);
+            }
+        </script>
+    </head>
+    <body>
+        <!-- body & links go here -->
+        <div style="margin:auto;width:236px;height:69;">
+            <h3>Pick a background colour here!</h3>
+            <input type="color" id="html5colorpicker" onchange="clickColor(0, -1, -1, 5);" value="#ff0000" style="width:85%;" class = "center"></br>
+        </div>
+        <p>
+
+
+        </p>
+        <div class = "center" style="margin:auto;>">
+            <form onsubmit = "change(); return false;">
+                <input type = "submit" value = "Change colour!"></br>
+            </form>
+        </div>
+        <h1 style = "font-size: small; " class = "center">
+            <a href = "index.html">Get to back to main page here!</a>
+        </h1>
+    </body>
+</html>
